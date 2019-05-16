@@ -110,6 +110,9 @@ export function makeTransform(
  * https://github.com/Microsoft/TypeScript/pull/20314 and released in TS 2.7.0) and
  * https://github.com/Microsoft/TypeScript/issues/17551 (fixed by
  * https://github.com/Microsoft/TypeScript/pull/18051 and released on TS 2.5.0).
+ *
+ * @param sf
+ * @param statements
  */
 function visitEachChildWorkaround(
   node: ts.Node,

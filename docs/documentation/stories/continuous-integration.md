@@ -82,8 +82,6 @@ jobs:
   build:
     working_directory: ~/my-project
     docker:
-      # specify the version you desire here
-      # see https://hub.docker.com/r/circleci/node/tags/
       - image: circleci/node:8-browsers
     steps:
       - checkout
@@ -124,7 +122,7 @@ sudo: false
 language: node_js
 node_js:
   - "8"
-
+  
 addons:
   apt:
     sources:
