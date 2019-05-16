@@ -1,6 +1,6 @@
 {
   "name": "angularcli-patched-cryptiles",
-  "version": "1.7.4.1",
+  "version": "1.7.5",
   "description": "CLI tool for Angular",
   "main": "packages/@angular/cli/lib/cli/index.js",
   "trackingCode": "UA-8594346-19",
