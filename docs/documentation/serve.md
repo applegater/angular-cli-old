@@ -1,70 +1,83 @@
 <!-- Links in /docs/documentation should NOT have `.md` at the end, because they end up in our wiki at release. -->
-**Documentation below is for CLI version 6 and we no longer accept PRs to improve this. For version 7 see [here](https://angular.io/cli/serve)**.
 
 # ng serve
 
 ## Overview
 `ng serve` builds the application and starts a web server.
 
-```bash
-ng serve [project]
-```
+All the build Options are available in serve, below are the additional options.
 
 ## Options
 <details>
-  <summary>prod</summary>
+  <summary>host</summary>
   <p>
-    <code>--prod</code>
+    <code>--host</code> (aliases: <code>-H</code>) <em>default value: localhost</em>
   </p>
   <p>
-    Flag to set configuration to "prod".
+    Listens only on localhost by default.
   </p>
 </details>
+
 <details>
-  <summary>configuration</summary>
+  <summary>hmr</summary>
   <p>
-    <code>--configuration</code> (alias: <code>-c</code>)
+    <code>--hmr</code> <em>default value: false</em>
   </p>
   <p>
-    Specify the configuration to use.
+    Enable hot module replacement.
   </p>
 </details>
+
 <details>
-  <summary>browser-target</summary>
+  <summary>live-reload</summary>
   <p>
-    <code>--browser-target</code>
+    <code>--live-reload</code> (aliases: <code>-lr</code>) <em>default value: true</em>
   </p>
   <p>
-    Target to serve.
+    Whether to reload the page on change, using live-reload.
   </p>
 </details>
+
+<details>
+  <summary>public-host</summary>
+  <p>
+    <code>--public-host</code> (aliases: <code>--live-reload-client</code>)
+  </p>
+  <p>
+    Specify the URL that the browser client will use.
+  </p>
+</details>
+
+<details>
+  <summary>disable-host-check</summary>
+  <p>
+    <code>--disable-host-check</code> <em>default value: false</em>
+  </p>
+  <p>
+    Don't verify connected clients are part of allowed hosts.
+  </p>
+</details>
+
+<details>
+  <summary>open</summary>
+  <p>
+    <code>--open</code> (aliases: <code>-o</code>) <em>default value: false</em>
+  </p>
+  <p>
+    Opens the url in default browser.
+  </p>
+</details>
+
 <details>
   <summary>port</summary>
   <p>
-    <code>--port</code>
+    <code>--port</code> (aliases: <code>-p</code>) <em>default value: 4200</em>
   </p>
   <p>
-    Port to listen on.
+    Port to listen to for serving.
   </p>
 </details>
-<details>
-  <summary>host</summary>
-  <p>
-    <code>--host</code>
-  </p>
-  <p>
-    Host to listen on.
-  </p>
-</details>
-<details>
-  <summary>proxy-config</summary>
-  <p>
-    <code>--proxy-config</code>
-  </p>
-  <p>
-    Proxy configuration file.
-  </p>
-</details>
+
 <details>
   <summary>ssl</summary>
   <p>
@@ -74,6 +87,17 @@ ng serve [project]
     Serve using HTTPS.
   </p>
 </details>
+
+<details>
+  <summary>ssl-cert</summary>
+  <p>
+    <code>--ssl-cert</code> (aliases: <code>-</code>) <em>default value: </em>
+  </p>
+  <p>
+    SSL certificate to use for serving HTTPS.
+  </p>
+</details>
+
 <details>
   <summary>ssl-key</summary>
   <p>
@@ -83,105 +107,7 @@ ng serve [project]
     SSL key to use for serving HTTPS.
   </p>
 </details>
-<details>
-  <summary>ssl-cert</summary>
-  <p>
-    <code>--ssl-cert</code>
-  </p>
-  <p>
-    SSL certificate to use for serving HTTPS.
-  </p>
-</details>
-<details>
-  <summary>open</summary>
-  <p>
-    <code>--open</code> (alias: <code>-o</code>)
-  </p>
-  <p>
-    Opens the url in default browser.
-  </p>
-</details>
-<details>
-  <summary>live-reload</summary>
-  <p>
-    <code>--live-reload</code>
-  </p>
-  <p>
-    Whether to reload the page on change, using live-reload.
-  </p>
-</details>
-<details>
-  <summary>public-host</summary>
-  <p>
-    <code>--public-host</code>
-  </p>
-  <p>
-    Specify the URL that the browser client will use.
-  </p>
-</details>
-<details>
-  <summary>serve-path</summary>
-  <p>
-    <code>--serve-path</code>
-  </p>
-  <p>
-    The pathname where the app will be served.
-  </p>
-</details>
-<details>
-  <summary>disable-host-check</summary>
-  <p>
-    <code>--disable-host-check</code>
-  </p>
-  <p>
-    Don't verify connected clients are part of allowed hosts.
-  </p>
-</details>
-<details>
-  <summary>hmr</summary>
-  <p>
-    <code>--hmr</code>
-  </p>
-  <p>
-    Enable hot module replacement.
-  </p>
-</details>
-<details>
-  <summary>watch</summary>
-  <p>
-    <code>--watch</code>
-  </p>
-  <p>
-    Rebuild on change.
-  </p>
-</details>
-<details>
-  <summary>hmr-warning</summary>
-  <p>
-    <code>--hmr-warning</code>
-  </p>
-  <p>
-    Show a warning when the --hmr option is enabled.
-  </p>
-</details>
-<details>
-  <summary>serve-path-default-warning</summary>
-  <p>
-    <code>--serve-path-default-warning</code>
-  </p>
-  <p>
-    Show a warning when deploy-url/base-href use unsupported serve path values.
-  </p>
-</details>
-<details>
-  <summary>optimization</summary>
-  <p>
-    <code>--optimization</code>
-  </p>
-  <p>
-    Enables optimization of the build output.
-  </p>
-</details>
+
 <details>
   <summary>aot</summary>
   <p>
@@ -191,84 +117,200 @@ ng serve [project]
     Build using Ahead of Time compilation.
   </p>
 </details>
-<details>
-  <summary>source-map</summary>
-  <p>
-    <code>--source-map</code>
-  </p>
-  <p>
-    Output sourcemaps.
-  </p>
-</details>
-<details>
-  <summary>eval-source-map</summary>
-  <p>
-    <code>--eval-source-map</code>
-  </p>
-  <p>
-    Output in-file eval sourcemaps.
-  </p>
-</details>
-<details>
-  <summary>vendor-source-map</summary>
-  <p>
-    <code>--vendor-source-map</code>
-  </p>
-  <p>
-    Resolve vendor packages sourcemaps.
-  </p>
-</details>
-<details>
-  <summary>vendor-chunk</summary>
-  <p>
-    <code>--vendor-chunk</code>
-  </p>
-  <p>
-    Use a separate bundle containing only vendor libraries.
-  </p>
-</details>
-<details>
-  <summary>common-chunk</summary>
-  <p>
-    <code>--common-chunk</code>
-  </p>
-  <p>
-    Use a separate bundle containing code used across multiple bundles.
-  </p>
-</details>
+
 <details>
   <summary>base-href</summary>
   <p>
-    <code>--base-href</code>
+    <code>--base-href</code> (aliases: <code>-bh</code>)
   </p>
   <p>
     Base url for the application being built.
   </p>
 </details>
+
 <details>
   <summary>deploy-url</summary>
   <p>
-    <code>--deploy-url</code>
+    <code>--deploy-url</code> (aliases: <code>-d</code>)
   </p>
   <p>
     URL where files will be deployed.
   </p>
 </details>
+
 <details>
-  <summary>verbose</summary>
+  <summary>environment</summary>
   <p>
-    <code>--verbose</code>
+    <code>--environment</code> (aliases: <code>-e</code>)
   </p>
   <p>
-    Adds more details to output logging.
+    Defines the build environment.
   </p>
 </details>
+
+<details>
+  <summary>extract-css</summary>
+  <p>
+    <code>--extract-css</code> (aliases: <code>-ec</code>)
+  </p>
+  <p>
+    Extract css from global styles onto css files instead of js ones.
+  </p>
+</details>
+
+<details>
+  <summary>i18n-file</summary>
+  <p>
+    <code>--i18n-file</code>
+  </p>
+  <p>
+    Localization file to use for i18n.
+  </p>
+</details>
+
+<details>
+  <summary>i18n-format</summary>
+  <p>
+    <code>--i18n-format</code>
+  </p>
+  <p>
+    Format of the localization file specified with --i18n-file.
+  </p>
+</details>
+
+<details>
+  <summary>locale</summary>
+  <p>
+    <code>--locale</code>
+  </p>
+  <p>
+    Locale to use for i18n.
+  </p>
+</details>
+
+<details>
+  <summary>missing-translation</summary>
+  <p>
+    <code>--missing-translation</code>
+  </p>
+  <p>
+    How to handle missing translations for i18n.
+  </p>
+  <p>
+    Values: <code>error</code>, <code>warning</code>, <code>ignore</code>
+  </p>
+</details>
+
+<details>
+  <summary>output-hashing</summary>
+  <p>
+    <code>--output-hashing</code> (aliases: <code>-oh</code>) <em>default value: </em>
+  </p>
+  <p>
+    Define the output filename cache-busting hashing mode. Possible values: <code>none</code>, <code>all</code>, <code>media</code>, <code>bundles</code>
+  </p>
+</details>
+
+<details>
+  <summary>output-path</summary>
+  <p>
+    <code>--output-path</code> (aliases: <code>-op</code>) <em>default value: </em>
+  </p>
+  <p>
+    Path where output will be placed.
+  </p>
+</details>
+
+<details>
+  <summary>poll</summary>
+  <p>
+    <code>--poll</code>
+  </p>
+  <p>
+    Enable and define the file watching poll time period (milliseconds) .
+  </p>
+</details>
+
 <details>
   <summary>progress</summary>
   <p>
-    <code>--progress</code>
+    <code>--progress</code> (aliases: <code>-pr</code>) <em>default value: true inside TTY, false otherwise</em>
   </p>
   <p>
     Log progress to the console while building.
   </p>
 </details>
+
+<details>
+  <summary>proxy-config</summary>
+  <p>
+    <code>--proxy-config</code> (aliases: <code>-pc</code>)
+  </p>
+  <p>
+    Use a <a href="https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/proxy.md">proxy</a> configuration file to send some requests to a backend server rather than the webpack dev server.
+  </p>
+</details>
+
+<details>
+  <summary>sourcemap</summary>
+  <p>
+    <code>--sourcemap</code> (aliases: <code>-sm</code>, <code>sourcemaps</code>)
+  </p>
+  <p>
+    Output sourcemaps.
+  </p>
+</details>
+
+<details>
+  <summary>target</summary>
+  <p>
+    <code>--target</code> (aliases: <code>-t</code>, <code>-dev</code>, <code>-prod</code>) <em>default value: development</em>
+  </p>
+  <p>
+    Defines the build target.
+  </p>
+</details>
+
+<details>
+  <summary>vendor-chunk</summary>
+  <p>
+    <code>--vendor-chunk</code> (aliases: <code>-vc</code>) <em>default value: true</em>
+  </p>
+  <p>
+    Use a separate bundle containing only vendor libraries.
+  </p>
+</details>
+
+<details>
+  <summary>common-chunk</summary>
+  <p>
+    <code>--common-chunk</code> (aliases: <code>-cc</code>) <em>default value: true</em>
+  </p>
+  <p>
+    Use a separate bundle containing code used across multiple bundles.
+  </p>
+</details>
+
+<details>
+  <summary>verbose</summary>
+  <p>
+    <code>--verbose</code> (aliases: <code>-v</code>) <em>default value: false</em>
+  </p>
+  <p>
+    Adds more details to output logging.
+  </p>
+</details>
+
+<details>
+  <summary>watch</summary>
+  <p>
+    <code>--watch</code> (aliases: <code>-w</code>)
+  </p>
+  <p>
+    Run build when files change.
+  </p>
+</details>
+
+
+## Note
+When running `ng serve`, the compiled output is served from memory, not from disk. This means that the application being served is not located on disk in the `dist` folder.

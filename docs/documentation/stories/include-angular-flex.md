@@ -1,5 +1,3 @@
-**Documentation below is deprecated and we no longer accept PRs to improve this.**
-
 ## Include [Flex Layout](https://github.com/angular/flex-layout) in your CLI application
 
 <a href="https://tburleson-layouts-demos.firebaseapp.com/#/docs" target="_blank">

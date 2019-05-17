@@ -1,5 +1,3 @@
-**Documentation below is deprecated and we no longer accept PRs to improve this.**
-
 # Include [Angular Material](https://material.angular.io)
 
 [Angular Material](https://material.angular.io) is a set of Material Design components for Angular apps. To get started please visit these links to the Angular Material project:

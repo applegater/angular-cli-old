@@ -1,32 +1,39 @@
-**Documentation below is for CLI version 6 and we no longer accept PRs to improve this. For version 7 see [here](https://angular.io/cli/generate)**.
-
 # ng generate guard
 
 ## Overview
 `ng generate guard [name]` generates a guard
 
-## Alias
-g - `ng generate g [name]`
-
 ## Options
 <details>
-  <summary>dry-run</summary>
+  <summary>app</summary>
   <p>
-    <code>--dry-run</code> (alias: <code>-d</code>)
+    <code>--app</code> (aliases: <code>-a</code>) <em>default value: 1st app</em>
   </p>
   <p>
-    Run through without making any changes.
+    Specifies app name to use.
   </p>
 </details>
+
 <details>
-  <summary>force</summary>
+  <summary>flat</summary>
   <p>
-    <code>--force</code> (alias: <code>-f</code>)
+    <code>--flat</code>
   </p>
   <p>
-    Forces overwriting of files.
+    Indicate if a dir is created.
   </p>
 </details>
+
+<details>
+  <summary>module</summary>
+  <p>
+    <code>--module</code> (aliases: <code>-m</code>)
+  </p>
+  <p>
+    Specifies where the guard should be provided.
+  </p>
+</details>
+
 <details>
   <summary>spec</summary>
   <p>
@@ -34,32 +41,5 @@ g - `ng generate g [name]`
   </p>
   <p>
     Specifies if a spec file is generated.
-  </p>
-</details>
-<details>
-  <summary>flat</summary>
-  <p>
-    <code>--flat</code>
-  </p>
-  <p>
-    Flag to indicate if a dir is created.
-  </p>
-</details>
-<details>
-  <summary>module</summary>
-  <p>
-    <code>--module</code> (alias: <code>-m</code>)
-  </p>
-  <p>
-    Allows specification of the declaring module.
-  </p>
-</details>
-<details>
-  <summary>project</summary>
-  <p>
-    <code>--project</code>
-  </p>
-  <p>
-    The name of the project.
   </p>
 </details>
